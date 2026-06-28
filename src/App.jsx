@@ -5,7 +5,17 @@ import { Routes, Route, NavLink } from 'react-router'
 function App() {
 
   const [posts, setPosts] =useState([]);
-  useEffect(() )
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() =>{
+    fetch('./data/blog.json')
+    .then(res => res.json())
+    .then(result =>{
+      console.log(result);
+      setPosts(result);
+      setLoaded(true);
+    })
+    .catch((e)=> console.error("데이터로드 실패:",e));
+  },[]);
 
 
   return (
@@ -16,7 +26,7 @@ function App() {
         <Route path="posts" element={<Posts posts={posts} />} />
         <Route
           path="posts/:id"
-          element={<PostDetail posts={} onDelete={}/>}
+          element={<PostDetail posts={posts} onDelete={handleDelete}/>}
         />
         <Route path="*" element={<NotFound />}/>
       </Route>      
