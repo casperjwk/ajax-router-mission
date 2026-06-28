@@ -35,7 +35,7 @@ function App() {
         />
         <Route
         path="/posts/:id/edit"
-        element={<PostEdit posts={posts}/>}></Route>
+        element={<PostEdit posts={posts} setPosts={setPosts}/>}></Route>
         <Route path="*" element={<NotFound />}/>
       </Route>      
     </Routes>
