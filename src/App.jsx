@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import { Routes, Route, NavLink } from 'react-router'
+import { Routes, Route } from 'react-router'
 
 function App() {
 
