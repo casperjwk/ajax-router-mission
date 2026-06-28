@@ -15,4 +15,14 @@ export default function PostDetail(posts, onDelete) {
       </div>
     )
   }
+  return(
+    <div>
+      <h2>{post.title}</h2>
+      <caption>{post.createdAt}</caption>
+      <p>{post.content}</p>
+      <Link to={`/posts/${post.id}/edit`}>수정</Link>
+      <button onClick={() => onDelete(post.id)}>삭제</button>
+    </div>
+  )
+  
 }
