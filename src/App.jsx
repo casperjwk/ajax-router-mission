@@ -17,6 +17,10 @@ function App() {
     .catch((e)=> console.error("데이터로드 실패:",e));
   },[]);
 
+  const handleDelete = (id) =>{
+    const updatedPosts = posts.filter((post) => post.id !== id);
+    setPosts(updatedPosts);
+  }
 
   return (
     <div>
