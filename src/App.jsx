@@ -28,6 +28,9 @@ function App() {
           path="posts/:id"
           element={<PostDetail posts={posts} onDelete={handleDelete}/>}
         />
+        <Route
+        path="posts/:id/edit"
+        element={<PostEdit posts={posts}/>}></Route>
         <Route path="*" element={<NotFound />}/>
       </Route>      
     </Routes>
