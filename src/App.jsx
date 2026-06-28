@@ -1,6 +1,13 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router'
+import Layout from './components/Layout'
+import Home from './pages/Home'
+import Posts from './pages/Posts'
+import PostNew from './pages/PostNew'
+import PostDetail from './pages/PostDetail'
+import PostEdit from './pages/PostEdit'
+import NotFound from './pages/NotFound'
 
 function App() {
 

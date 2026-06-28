@@ -1,3 +1,6 @@
+import { Link } from 'react-router'
+import { NavLink } from 'react-router'
+
 export default function Header(){
   return(
        <header>

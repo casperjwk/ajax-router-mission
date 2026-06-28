@@ -1,6 +1,7 @@
 import { Link } from 'react-router'
 
-export default function Posts({ post }) {
+
+export default function Posts({ posts =[] }) {
   return (
     <section>
       <h2>글목록</h2>
@@ -8,7 +9,7 @@ export default function Posts({ post }) {
         <p>글이 없습니다.</p>
       ): (
         <ul>
-          {post.map((post)=>(
+          {posts.map((post)=>(
             <li key={post.id}>
               <Link to={`/posts/${post.id}`}>
                 {post.title}

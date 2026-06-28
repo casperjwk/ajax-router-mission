@@ -1,10 +1,10 @@
 import { useParams, Link , useNavigate } from 'react-router'
 
-export default function PostDetail(posts, onDelete) {
+export default function PostDetail({posts, onDelete}) {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const post = posts.find((p) => p.id === Number(id));
+  const post = posts?.find((p) => p.id === Number(id));
 
   if (!post) {
     return (
@@ -27,7 +27,7 @@ export default function PostDetail(posts, onDelete) {
   return(
     <div>
       <h2>{post.title}</h2>
-      <caption>{post.createdAt}</caption>
+      <p>{post.createdAt}</p>
       <p>{post.content}</p>
       <Link to={`/posts/${post.id}/edit`}>수정</Link>
       <button onClick={handleDeleteClick}>삭제</button>
