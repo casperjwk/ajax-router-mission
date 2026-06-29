@@ -2,7 +2,7 @@ import { Link } from 'react-router'
 
 
 export default function Home({ posts }) {
-  const latestPosts = [...posts].reverse();
+  const latestPosts = [...posts].sort((a,b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0,3);
 
   return(
     <section>

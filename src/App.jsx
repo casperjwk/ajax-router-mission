@@ -14,7 +14,7 @@ function App() {
   const [posts, setPosts] =useState([]);
   const [loaded, setLoaded] = useState(false);
   useEffect(() =>{
-    fetch('./data/blog.json')
+    fetch('/data/blog.json')
     .then(res => res.json())
     .then(result =>{
       console.log(result);

@@ -5,7 +5,7 @@ export default function Posts({ posts =[] }) {
   return (
     <section>
       <h2>글목록</h2>
-      {Posts.length === 0 ? (
+      {posts.length === 0 ? (
         <p>글이 없습니다.</p>
       ): (
         <ul>
